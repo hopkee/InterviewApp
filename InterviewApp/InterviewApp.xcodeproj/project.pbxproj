@@ -12,12 +12,26 @@
 		35A39B2B280E0B15007D6064 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A39B2A280E0B15007D6064 /* CalendarVC.swift */; };
 		35A39B2D280E0BD5007D6064 /* MyInterviewsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A39B2C280E0BD5007D6064 /* MyInterviewsTVC.swift */; };
 		35A39B2F280E10E0007D6064 /* AddNewInterviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A39B2E280E10E0007D6064 /* AddNewInterviewVC.swift */; };
-		35A39B35280E1E6E007D6064 /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A39B34280E1E6E007D6064 /* CustomModalViewController.swift */; };
+		35A39B35280E1E6E007D6064 /* NewInterviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A39B34280E1E6E007D6064 /* NewInterviewView.swift */; };
 		35F2F004280DF50500B55B74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F2F003280DF50500B55B74 /* AppDelegate.swift */; };
 		35F2F006280DF50500B55B74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F2F005280DF50500B55B74 /* SceneDelegate.swift */; };
 		35F2F00D280DF50800B55B74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F2F00C280DF50800B55B74 /* Assets.xcassets */; };
 		35F2F010280DF50800B55B74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F2F00E280DF50800B55B74 /* LaunchScreen.storyboard */; };
 		35F2F01C280DFB1600B55B74 /* AccountTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F2F01B280DFB1600B55B74 /* AccountTVC.swift */; };
+		A70079A128147FA300A841BD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A70079A028147FA300A841BD /* FirebaseAuth */; };
+		A70079A328147FA300A841BD /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = A70079A228147FA300A841BD /* FirebaseCrashlytics */; };
+		A70079A528147FA300A841BD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A70079A428147FA300A841BD /* FirebaseDatabase */; };
+		A70079A728147FA300A841BD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A70079A628147FA300A841BD /* FirebaseStorage */; };
+		A70079AA2814854E00A841BD /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70079A92814854E00A841BD /* DatabaseManager.swift */; };
+		A70079AC2814881900A841BD /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70079AB2814881900A841BD /* AuthManager.swift */; };
+		A70079AE2814883000A841BD /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70079AD2814883000A841BD /* Users.swift */; };
+		A70079B32814944F00A841BD /* CreateNewAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70079B22814944F00A841BD /* CreateNewAccountVC.swift */; };
+		A70079B72814989600A841BD /* WelcomeFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70079B62814989600A841BD /* WelcomeFlow.storyboard */; };
+		A70079B9281498B400A841BD /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70079B8281498B400A841BD /* WelcomeVC.swift */; };
+		A7BF17042811DC1A006F58FA /* SimpleRecordView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BF17032811DC1A006F58FA /* SimpleRecordView.storyboard */; };
+		A7BF17062811DC7D006F58FA /* SimpleRecordingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF17052811DC7D006F58FA /* SimpleRecordingVC.swift */; };
+		A7BF170828130929006F58FA /* Interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF170728130929006F58FA /* Interview.swift */; };
+		A7BF170A28146F08006F58FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7BF170928146F08006F58FA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +40,7 @@
 		35A39B2A280E0B15007D6064 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		35A39B2C280E0BD5007D6064 /* MyInterviewsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInterviewsTVC.swift; sourceTree = "<group>"; };
 		35A39B2E280E10E0007D6064 /* AddNewInterviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewInterviewVC.swift; sourceTree = "<group>"; };
-		35A39B34280E1E6E007D6064 /* CustomModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
+		35A39B34280E1E6E007D6064 /* NewInterviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInterviewView.swift; sourceTree = "<group>"; };
 		35F2F000280DF50400B55B74 /* InterviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F2F003280DF50500B55B74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F2F005280DF50500B55B74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +48,16 @@
 		35F2F00F280DF50800B55B74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35F2F011280DF50800B55B74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35F2F01B280DFB1600B55B74 /* AccountTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTVC.swift; sourceTree = "<group>"; };
+		A70079A92814854E00A841BD /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		A70079AB2814881900A841BD /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		A70079AD2814883000A841BD /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Users.swift; path = InterviewApp/Managers/Users.swift; sourceTree = SOURCE_ROOT; };
+		A70079B22814944F00A841BD /* CreateNewAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewAccountVC.swift; sourceTree = "<group>"; };
+		A70079B62814989600A841BD /* WelcomeFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeFlow.storyboard; sourceTree = "<group>"; };
+		A70079B8281498B400A841BD /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		A7BF17032811DC1A006F58FA /* SimpleRecordView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleRecordView.storyboard; sourceTree = "<group>"; };
+		A7BF17052811DC7D006F58FA /* SimpleRecordingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRecordingVC.swift; sourceTree = "<group>"; };
+		A7BF170728130929006F58FA /* Interview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Interview.swift; path = InterviewApp/ViewControllers/Interview.swift; sourceTree = SOURCE_ROOT; };
+		A7BF170928146F08006F58FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +65,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70079A528147FA300A841BD /* FirebaseDatabase in Frameworks */,
+				A70079A728147FA300A841BD /* FirebaseStorage in Frameworks */,
+				A70079A128147FA300A841BD /* FirebaseAuth in Frameworks */,
+				A70079A328147FA300A841BD /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +94,14 @@
 		35F2F002280DF50400B55B74 /* InterviewApp */ = {
 			isa = PBXGroup;
 			children = (
+				A70079A82814848000A841BD /* Managers */,
 				35F2F017280DFA5A00B55B74 /* AppDelegates */,
 				35F2F01A280DFA9A00B55B74 /* Models */,
 				35F2F018280DFA6D00B55B74 /* ViewControllers */,
 				35F2F019280DFA8B00B55B74 /* Views */,
 				35F2F011280DF50800B55B74 /* Info.plist */,
 				35F2F00C280DF50800B55B74 /* Assets.xcassets */,
+				A7BF170928146F08006F58FA /* GoogleService-Info.plist */,
 			);
 			path = InterviewApp;
 			sourceTree = "<group>";
@@ -88,12 +118,15 @@
 		35F2F018280DFA6D00B55B74 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A70079AF281490F800A841BD /* SignUpViewControllers */,
 				35A39B2C280E0BD5007D6064 /* MyInterviewsTVC.swift */,
 				35A39B28280E08F4007D6064 /* InterviewersTVC.swift */,
 				35A39B2E280E10E0007D6064 /* AddNewInterviewVC.swift */,
 				35F2F01B280DFB1600B55B74 /* AccountTVC.swift */,
 				35A39B2A280E0B15007D6064 /* CalendarVC.swift */,
-				35A39B34280E1E6E007D6064 /* CustomModalViewController.swift */,
+				35A39B34280E1E6E007D6064 /* NewInterviewView.swift */,
+				A7BF17052811DC7D006F58FA /* SimpleRecordingVC.swift */,
+				A70079B8281498B400A841BD /* WelcomeVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -102,7 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				35F2F00E280DF50800B55B74 /* LaunchScreen.storyboard */,
+				A70079B62814989600A841BD /* WelcomeFlow.storyboard */,
 				350A90AA280DFCBC00D5BA6E /* Main.storyboard */,
+				A7BF17032811DC1A006F58FA /* SimpleRecordView.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,8 +145,27 @@
 		35F2F01A280DFA9A00B55B74 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A7BF170728130929006F58FA /* Interview.swift */,
+				A70079AD2814883000A841BD /* Users.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A70079A82814848000A841BD /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A70079A92814854E00A841BD /* DatabaseManager.swift */,
+				A70079AB2814881900A841BD /* AuthManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		A70079AF281490F800A841BD /* SignUpViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A70079B22814944F00A841BD /* CreateNewAccountVC.swift */,
+			);
+			path = SignUpViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +184,12 @@
 			dependencies = (
 			);
 			name = InterviewApp;
+			packageProductDependencies = (
+				A70079A028147FA300A841BD /* FirebaseAuth */,
+				A70079A228147FA300A841BD /* FirebaseCrashlytics */,
+				A70079A428147FA300A841BD /* FirebaseDatabase */,
+				A70079A628147FA300A841BD /* FirebaseStorage */,
+			);
 			productName = InterviewApp;
 			productReference = 35F2F000280DF50400B55B74 /* InterviewApp.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +218,9 @@
 				Base,
 			);
 			mainGroup = 35F2EFF7280DF50400B55B74;
+			packageReferences = (
+				A700799F28147FA300A841BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 35F2F001280DF50400B55B74 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -174,6 +237,9 @@
 			files = (
 				35F2F010280DF50800B55B74 /* LaunchScreen.storyboard in Resources */,
 				350A90AB280DFCBC00D5BA6E /* Main.storyboard in Resources */,
+				A70079B72814989600A841BD /* WelcomeFlow.storyboard in Resources */,
+				A7BF170A28146F08006F58FA /* GoogleService-Info.plist in Resources */,
+				A7BF17042811DC1A006F58FA /* SimpleRecordView.storyboard in Resources */,
 				35F2F00D280DF50800B55B74 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,13 +252,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				35F2F004280DF50500B55B74 /* AppDelegate.swift in Sources */,
+				A70079AC2814881900A841BD /* AuthManager.swift in Sources */,
+				A70079AA2814854E00A841BD /* DatabaseManager.swift in Sources */,
 				35A39B2F280E10E0007D6064 /* AddNewInterviewVC.swift in Sources */,
+				A7BF17062811DC7D006F58FA /* SimpleRecordingVC.swift in Sources */,
 				35A39B2B280E0B15007D6064 /* CalendarVC.swift in Sources */,
+				A70079B9281498B400A841BD /* WelcomeVC.swift in Sources */,
 				35A39B29280E08F4007D6064 /* InterviewersTVC.swift in Sources */,
 				35A39B2D280E0BD5007D6064 /* MyInterviewsTVC.swift in Sources */,
 				35F2F01C280DFB1600B55B74 /* AccountTVC.swift in Sources */,
-				35A39B35280E1E6E007D6064 /* CustomModalViewController.swift in Sources */,
+				A70079AE2814883000A841BD /* Users.swift in Sources */,
+				35A39B35280E1E6E007D6064 /* NewInterviewView.swift in Sources */,
 				35F2F006280DF50500B55B74 /* SceneDelegate.swift in Sources */,
+				A7BF170828130929006F58FA /* Interview.swift in Sources */,
+				A70079B32814944F00A841BD /* CreateNewAccountVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +410,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -366,7 +439,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +477,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A700799F28147FA300A841BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A70079A028147FA300A841BD /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A700799F28147FA300A841BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		A70079A228147FA300A841BD /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A700799F28147FA300A841BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		A70079A428147FA300A841BD /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A700799F28147FA300A841BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		A70079A628147FA300A841BD /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A700799F28147FA300A841BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 35F2EFF8280DF50400B55B74 /* Project object */;
 }

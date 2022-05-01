@@ -7,27 +7,50 @@
 
 import UIKit
 
-class CustomModalViewController: UIViewController {
+class NewInterviewView: UIViewController {
     // define lazy views
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Get Started"
-        label.font = .boldSystemFont(ofSize: 20)
+        label.text = "Select interview options"
+        label.font = .boldSystemFont(ofSize: 25)
         return label
     }()
     
-    lazy var notesLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem fringilla ut morbi tincidunt augue interdum. \n\nUt morbi tincidunt augue interdum velit euismod in pellentesque massa. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci a. Eget nullam non nisi est sit amet. Odio pellentesque diam volutpat commodo. Id eu nisl nunc mi ipsum faucibus vitae.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem fringilla ut morbi tincidunt augue interdum. Ut morbi tincidunt augue interdum velit euismod in pellentesque massa."
-        label.font = .systemFont(ofSize: 16)
-        label.textColor = .darkGray
-        label.numberOfLines = 0
-        return label
+    lazy var buttonRealtime: UIButton = {
+        let button = UIButton()
+        button.setTitle("Real-time transcripting", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.frame = CGRect(x: 20, y: -15, width: 300, height: 60)
+        button.backgroundColor = UIColor(red: 0 / 255, green: 99 / 255, blue: 193 / 255, alpha: 1)
+        button.layer.cornerRadius = 15
+        return button
     }()
+    
+    lazy var buttonSimpleRecordInterview: UIButton = {
+        let button = UIButton()
+        button.setTitle("Simple interview recording", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.frame = CGRect(x: 20, y: -15, width: 300, height: 60)
+        button.backgroundColor = UIColor(red: 0 / 255, green: 99 / 255, blue: 193 / 255, alpha: 1)
+        button.layer.cornerRadius = 15
+        return button
+    }()
+    
+    lazy var buttonAddRecordedAudio: UIButton = {
+        let button = UIButton()
+        button.setTitle("Add recorded audio", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.frame = CGRect(x: 20, y: -15, width: 300, height: 60)
+        button.backgroundColor = UIColor(red: 0 / 255, green: 99 / 255, blue: 193 / 255, alpha: 1)
+        button.layer.cornerRadius = 15
+        return button
+    }()
+    
+//    lazy var buttonTest: MainButton = MainButton(
     
     lazy var contentStackView: UIStackView = {
         let spacer = UIView()
-        let stackView = UIStackView(arrangedSubviews: [titleLabel, notesLabel, spacer])
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, buttonRealtime, buttonSimpleRecordInterview, buttonAddRecordedAudio, spacer])
         stackView.axis = .vertical
         stackView.spacing = 12.0
         return stackView
@@ -84,7 +107,7 @@ class CustomModalViewController: UIViewController {
     func setupView() {
         view.backgroundColor = .clear
     }
-    
+    	
     func setupConstraints() {
         // Add subviews
         view.addSubview(dimmedView)
@@ -110,6 +133,9 @@ class CustomModalViewController: UIViewController {
             contentStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -20),
             contentStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
             contentStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
+            buttonRealtime.heightAnchor.constraint(equalToConstant: 50),
+            buttonAddRecordedAudio.heightAnchor.constraint(equalToConstant: 50),
+            buttonSimpleRecordInterview.heightAnchor.constraint(equalToConstant: 50),
         ])
         
         // Set dynamic constraints

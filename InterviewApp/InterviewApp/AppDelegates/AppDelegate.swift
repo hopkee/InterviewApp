@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegate {
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        UITabBar.appearance().backgroundColor = UIColor(red: 0 / 255, green: 99 / 255, blue: 193 / 255, alpha: 1)
+        UITabBar.appearance().tintColor = .white
+        UITabBar.appearance().unselectedItemTintColor = .systemGray4
+        FirebaseApp.configure()
         return true
     }
 
@@ -31,14 +34,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     }
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        if viewController is CustomModalViewController {
+        if viewController is NewInterviewView {
                 if let newVC = tabBarController.storyboard?.instantiateViewController(withIdentifier: "CMViewController") {
                     newVC.modalPresentationStyle = .overCurrentContext
                     tabBarController.present(newVC, animated: false)
                     return false
                 }
             }
-
             return true
     }
 
