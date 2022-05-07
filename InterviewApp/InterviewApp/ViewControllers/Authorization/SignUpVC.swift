@@ -45,8 +45,6 @@ class SignUpVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
-//        guard let prevNavController = navigationController?.presentingViewController as? UINavigationController else { return }
-//        guard let vc = prevNavController.topViewController as? WelcomeVC else { return }
     }
     
     private func addNameInLabel(_ name: String) {
@@ -88,10 +86,10 @@ class SignUpVC: UIViewController {
         emailTFOutlet.layer.cornerRadius = 22
         passwordTFOutlet.layer.cornerRadius = 22
         confirmPassTFOutlet.layer.cornerRadius = 22
-        nameTFOutlet.backgroundColor = UIColor(red: 218 / 255, green: 235 / 255, blue: 254 / 255, alpha: 1)
-        emailTFOutlet.backgroundColor = UIColor(red: 218 / 255, green: 235 / 255, blue: 254 / 255, alpha: 1)
-        passwordTFOutlet.backgroundColor = UIColor(red: 218 / 255, green: 235 / 255, blue: 254 / 255, alpha: 1)
-        confirmPassTFOutlet.backgroundColor = UIColor(red: 218 / 255, green: 235 / 255, blue: 254 / 255, alpha: 1)
+        nameTFOutlet.backgroundColor = UIColor(red: 218 / 255, green: 235 / 255, blue: 254 / 255, alpha: 0.5)
+        emailTFOutlet.backgroundColor = UIColor(red: 218 / 255, green: 235 / 255, blue: 254 / 255, alpha: 0.5)
+        passwordTFOutlet.backgroundColor = UIColor(red: 218 / 255, green: 235 / 255, blue: 254 / 255, alpha: 0.5)
+        confirmPassTFOutlet.backgroundColor = UIColor(red: 218 / 255, green: 235 / 255, blue: 254 / 255, alpha: 0.5)
         nameTFOutlet.attributedPlaceholder = NSAttributedString(
             string: "Your name",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 0 / 255, green: 99 / 255, blue: 193 / 255, alpha: 1), NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 15.0)]

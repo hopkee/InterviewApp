@@ -33,6 +33,7 @@
 		A70079B32814944F00A841BD /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70079B22814944F00A841BD /* SignUpVC.swift */; };
 		A70079B72814989600A841BD /* AuthorizationFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70079B62814989600A841BD /* AuthorizationFlow.storyboard */; };
 		A70079B9281498B400A841BD /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70079B8281498B400A841BD /* WelcomeVC.swift */; };
+		A7B22747282679C6001373FA /* DetailInterviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B22746282679C6001373FA /* DetailInterviewVC.swift */; };
 		A7BF17042811DC1A006F58FA /* SimpleRecordView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BF17032811DC1A006F58FA /* SimpleRecordView.storyboard */; };
 		A7BF17062811DC7D006F58FA /* SimpleRecordingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF17052811DC7D006F58FA /* SimpleRecordingVC.swift */; };
 		A7BF170828130929006F58FA /* Interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF170728130929006F58FA /* Interview.swift */; };
@@ -64,6 +65,7 @@
 		A70079B22814944F00A841BD /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		A70079B62814989600A841BD /* AuthorizationFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorizationFlow.storyboard; sourceTree = "<group>"; };
 		A70079B8281498B400A841BD /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		A7B22746282679C6001373FA /* DetailInterviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInterviewVC.swift; sourceTree = "<group>"; };
 		A7BF17032811DC1A006F58FA /* SimpleRecordView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleRecordView.storyboard; sourceTree = "<group>"; };
 		A7BF17052811DC7D006F58FA /* SimpleRecordingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRecordingVC.swift; sourceTree = "<group>"; };
 		A7BF170728130929006F58FA /* Interview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Interview.swift; path = InterviewApp/ViewControllers/Interview.swift; sourceTree = SOURCE_ROOT; };
@@ -137,6 +139,7 @@
 				35A39B2A280E0B15007D6064 /* CalendarVC.swift */,
 				35A39B34280E1E6E007D6064 /* NewInterviewView.swift */,
 				A7BF17052811DC7D006F58FA /* SimpleRecordingVC.swift */,
+				A7B22746282679C6001373FA /* DetailInterviewVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				35F2F006280DF50500B55B74 /* SceneDelegate.swift in Sources */,
 				A7BF170828130929006F58FA /* Interview.swift in Sources */,
 				A70079B32814944F00A841BD /* SignUpVC.swift in Sources */,
+				A7B22747282679C6001373FA /* DetailInterviewVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

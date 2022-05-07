@@ -40,7 +40,6 @@ extension MyInterviewsVC: UITableViewDelegate, UITableViewDataSource {
         cell!.nameOfInterviewLblOutlet.text = interviewOne.title
         cell!.nameOfIntervieweeOutlet.text = interviewOne.interviewer?.name
         cell!.dateOfInterviewOutlet.text = interviewOne.date.description
-        cell?.separatorInset = UIEdgeInsets(top: -40, left: 0, bottom: 0, right: 0)
         return cell!
     }
     

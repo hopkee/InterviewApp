@@ -63,7 +63,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up">
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                                     <color key="baseForegroundColor" red="0.13422125579999999" green="0.38804036380000001" blue="0.75802117589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <color key="baseBackgroundColor" red="0.85342687370000003" green="0.92056494950000001" blue="0.99549871680000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="baseBackgroundColor" red="0.85342687370000003" green="0.92056494950000001" blue="0.99549871680000002" alpha="0.50199516245860931" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <segue destination="C6f-D2-M7j" kind="presentation" identifier="GoToSignUp" id="ORa-E7-yNT"/>
@@ -278,7 +278,7 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Skip">
                                             <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                             <color key="baseForegroundColor" red="0.13422125579999999" green="0.38804036380000001" blue="0.75802117589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="baseBackgroundColor" red="0.85342687370000003" green="0.92056494950000001" blue="0.99549871680000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseBackgroundColor" red="0.85342687370000003" green="0.92056494950000001" blue="0.99549871680000002" alpha="0.50026758459230136" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="EUM-AP-ANh" kind="show" id="Exf-Ar-jJH"/>

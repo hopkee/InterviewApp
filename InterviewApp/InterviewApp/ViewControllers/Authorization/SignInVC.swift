@@ -41,8 +41,8 @@ class SignInVC: UIViewController {
         passwordTFOutlet.layer.borderWidth = CGFloat(1)
         emailTFOutlet.layer.cornerRadius = 22
         passwordTFOutlet.layer.cornerRadius = 22
-        emailTFOutlet.backgroundColor = UIColor(red: 218 / 255, green: 235 / 255, blue: 254 / 255, alpha: 1)
-        passwordTFOutlet.backgroundColor = UIColor(red: 218 / 255, green: 235 / 255, blue: 254 / 255, alpha: 1)
+        emailTFOutlet.backgroundColor = UIColor(red: 218 / 255, green: 235 / 255, blue: 254 / 255, alpha: 0.5)
+        passwordTFOutlet.backgroundColor = UIColor(red: 218 / 255, green: 235 / 255, blue: 254 / 255, alpha: 0.5)
         emailTFOutlet.attributedPlaceholder = NSAttributedString(
             string: "Email",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 0 / 255, green: 99 / 255, blue: 193 / 255, alpha: 1), NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 15.0)]
