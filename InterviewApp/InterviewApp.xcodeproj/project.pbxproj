@@ -8,16 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		350A90AB280DFCBC00D5BA6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350A90AA280DFCBC00D5BA6E /* Main.storyboard */; };
-		35A39B29280E08F4007D6064 /* InterviewersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A39B28280E08F4007D6064 /* InterviewersTVC.swift */; };
+		35653B392823158B006A0A0A /* AddProfilePictureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35653B382823158B006A0A0A /* AddProfilePictureVC.swift */; };
+		35653B3B28231BB3006A0A0A /* SuccesfullyCreatedAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35653B3A28231BB3006A0A0A /* SuccesfullyCreatedAccountVC.swift */; };
+		35A39B29280E08F4007D6064 /* IntervieweesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A39B28280E08F4007D6064 /* IntervieweesTVC.swift */; };
 		35A39B2B280E0B15007D6064 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A39B2A280E0B15007D6064 /* CalendarVC.swift */; };
-		35A39B2D280E0BD5007D6064 /* MyInterviewsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A39B2C280E0BD5007D6064 /* MyInterviewsTVC.swift */; };
 		35A39B2F280E10E0007D6064 /* AddNewInterviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A39B2E280E10E0007D6064 /* AddNewInterviewVC.swift */; };
 		35A39B35280E1E6E007D6064 /* NewInterviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A39B34280E1E6E007D6064 /* NewInterviewView.swift */; };
+		35D8AEE42821285A004D234A /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D8AEE32821285A004D234A /* SignInVC.swift */; };
+		35E63DBB2825DF4500140B0B /* MyInterviewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E63DBA2825DF4500140B0B /* MyInterviewsVC.swift */; };
 		35F2F004280DF50500B55B74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F2F003280DF50500B55B74 /* AppDelegate.swift */; };
 		35F2F006280DF50500B55B74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F2F005280DF50500B55B74 /* SceneDelegate.swift */; };
 		35F2F00D280DF50800B55B74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F2F00C280DF50800B55B74 /* Assets.xcassets */; };
 		35F2F010280DF50800B55B74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F2F00E280DF50800B55B74 /* LaunchScreen.storyboard */; };
 		35F2F01C280DFB1600B55B74 /* AccountTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F2F01B280DFB1600B55B74 /* AccountTVC.swift */; };
+		35FDD0C52825D226000215D8 /* InterviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FDD0C32825D226000215D8 /* InterviewCell.swift */; };
+		35FDD0C62825D226000215D8 /* InterviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35FDD0C42825D226000215D8 /* InterviewCell.xib */; };
 		A70079A128147FA300A841BD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A70079A028147FA300A841BD /* FirebaseAuth */; };
 		A70079A328147FA300A841BD /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = A70079A228147FA300A841BD /* FirebaseCrashlytics */; };
 		A70079A528147FA300A841BD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A70079A428147FA300A841BD /* FirebaseDatabase */; };
@@ -25,8 +30,8 @@
 		A70079AA2814854E00A841BD /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70079A92814854E00A841BD /* DatabaseManager.swift */; };
 		A70079AC2814881900A841BD /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70079AB2814881900A841BD /* AuthManager.swift */; };
 		A70079AE2814883000A841BD /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70079AD2814883000A841BD /* Users.swift */; };
-		A70079B32814944F00A841BD /* CreateNewAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70079B22814944F00A841BD /* CreateNewAccountVC.swift */; };
-		A70079B72814989600A841BD /* WelcomeFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70079B62814989600A841BD /* WelcomeFlow.storyboard */; };
+		A70079B32814944F00A841BD /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70079B22814944F00A841BD /* SignUpVC.swift */; };
+		A70079B72814989600A841BD /* AuthorizationFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70079B62814989600A841BD /* AuthorizationFlow.storyboard */; };
 		A70079B9281498B400A841BD /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70079B8281498B400A841BD /* WelcomeVC.swift */; };
 		A7BF17042811DC1A006F58FA /* SimpleRecordView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BF17032811DC1A006F58FA /* SimpleRecordView.storyboard */; };
 		A7BF17062811DC7D006F58FA /* SimpleRecordingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF17052811DC7D006F58FA /* SimpleRecordingVC.swift */; };
@@ -36,11 +41,14 @@
 
 /* Begin PBXFileReference section */
 		350A90AA280DFCBC00D5BA6E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		35A39B28280E08F4007D6064 /* InterviewersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewersTVC.swift; sourceTree = "<group>"; };
+		35653B382823158B006A0A0A /* AddProfilePictureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfilePictureVC.swift; sourceTree = "<group>"; };
+		35653B3A28231BB3006A0A0A /* SuccesfullyCreatedAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccesfullyCreatedAccountVC.swift; sourceTree = "<group>"; };
+		35A39B28280E08F4007D6064 /* IntervieweesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervieweesTVC.swift; sourceTree = "<group>"; };
 		35A39B2A280E0B15007D6064 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
-		35A39B2C280E0BD5007D6064 /* MyInterviewsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInterviewsTVC.swift; sourceTree = "<group>"; };
 		35A39B2E280E10E0007D6064 /* AddNewInterviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewInterviewVC.swift; sourceTree = "<group>"; };
 		35A39B34280E1E6E007D6064 /* NewInterviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInterviewView.swift; sourceTree = "<group>"; };
+		35D8AEE32821285A004D234A /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		35E63DBA2825DF4500140B0B /* MyInterviewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInterviewsVC.swift; sourceTree = "<group>"; };
 		35F2F000280DF50400B55B74 /* InterviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F2F003280DF50500B55B74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F2F005280DF50500B55B74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,11 +56,13 @@
 		35F2F00F280DF50800B55B74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35F2F011280DF50800B55B74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35F2F01B280DFB1600B55B74 /* AccountTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTVC.swift; sourceTree = "<group>"; };
+		35FDD0C32825D226000215D8 /* InterviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewCell.swift; sourceTree = "<group>"; };
+		35FDD0C42825D226000215D8 /* InterviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterviewCell.xib; sourceTree = "<group>"; };
 		A70079A92814854E00A841BD /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		A70079AB2814881900A841BD /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		A70079AD2814883000A841BD /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Users.swift; path = InterviewApp/Managers/Users.swift; sourceTree = SOURCE_ROOT; };
-		A70079B22814944F00A841BD /* CreateNewAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewAccountVC.swift; sourceTree = "<group>"; };
-		A70079B62814989600A841BD /* WelcomeFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeFlow.storyboard; sourceTree = "<group>"; };
+		A70079B22814944F00A841BD /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		A70079B62814989600A841BD /* AuthorizationFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorizationFlow.storyboard; sourceTree = "<group>"; };
 		A70079B8281498B400A841BD /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		A7BF17032811DC1A006F58FA /* SimpleRecordView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleRecordView.storyboard; sourceTree = "<group>"; };
 		A7BF17052811DC7D006F58FA /* SimpleRecordingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRecordingVC.swift; sourceTree = "<group>"; };
@@ -118,15 +128,15 @@
 		35F2F018280DFA6D00B55B74 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A70079AF281490F800A841BD /* SignUpViewControllers */,
-				35A39B2C280E0BD5007D6064 /* MyInterviewsTVC.swift */,
-				35A39B28280E08F4007D6064 /* InterviewersTVC.swift */,
+				35FDD0C72825D238000215D8 /* Cells */,
+				A70079AF281490F800A841BD /* Authorization */,
+				35E63DBA2825DF4500140B0B /* MyInterviewsVC.swift */,
+				35A39B28280E08F4007D6064 /* IntervieweesTVC.swift */,
 				35A39B2E280E10E0007D6064 /* AddNewInterviewVC.swift */,
 				35F2F01B280DFB1600B55B74 /* AccountTVC.swift */,
 				35A39B2A280E0B15007D6064 /* CalendarVC.swift */,
 				35A39B34280E1E6E007D6064 /* NewInterviewView.swift */,
 				A7BF17052811DC7D006F58FA /* SimpleRecordingVC.swift */,
-				A70079B8281498B400A841BD /* WelcomeVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -135,9 +145,10 @@
 			isa = PBXGroup;
 			children = (
 				35F2F00E280DF50800B55B74 /* LaunchScreen.storyboard */,
-				A70079B62814989600A841BD /* WelcomeFlow.storyboard */,
+				A70079B62814989600A841BD /* AuthorizationFlow.storyboard */,
 				350A90AA280DFCBC00D5BA6E /* Main.storyboard */,
 				A7BF17032811DC1A006F58FA /* SimpleRecordView.storyboard */,
+				35FDD0C82825D2C7000215D8 /* CellViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +162,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		35FDD0C72825D238000215D8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				35FDD0C32825D226000215D8 /* InterviewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		35FDD0C82825D2C7000215D8 /* CellViews */ = {
+			isa = PBXGroup;
+			children = (
+				35FDD0C42825D226000215D8 /* InterviewCell.xib */,
+			);
+			path = CellViews;
+			sourceTree = "<group>";
+		};
 		A70079A82814848000A841BD /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,12 +187,16 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		A70079AF281490F800A841BD /* SignUpViewControllers */ = {
+		A70079AF281490F800A841BD /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				A70079B22814944F00A841BD /* CreateNewAccountVC.swift */,
+				A70079B8281498B400A841BD /* WelcomeVC.swift */,
+				A70079B22814944F00A841BD /* SignUpVC.swift */,
+				35D8AEE32821285A004D234A /* SignInVC.swift */,
+				35653B382823158B006A0A0A /* AddProfilePictureVC.swift */,
+				35653B3A28231BB3006A0A0A /* SuccesfullyCreatedAccountVC.swift */,
 			);
-			path = SignUpViewControllers;
+			path = Authorization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,9 +268,10 @@
 			files = (
 				35F2F010280DF50800B55B74 /* LaunchScreen.storyboard in Resources */,
 				350A90AB280DFCBC00D5BA6E /* Main.storyboard in Resources */,
-				A70079B72814989600A841BD /* WelcomeFlow.storyboard in Resources */,
+				A70079B72814989600A841BD /* AuthorizationFlow.storyboard in Resources */,
 				A7BF170A28146F08006F58FA /* GoogleService-Info.plist in Resources */,
 				A7BF17042811DC1A006F58FA /* SimpleRecordView.storyboard in Resources */,
+				35FDD0C62825D226000215D8 /* InterviewCell.xib in Resources */,
 				35F2F00D280DF50800B55B74 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,17 +287,21 @@
 				A70079AC2814881900A841BD /* AuthManager.swift in Sources */,
 				A70079AA2814854E00A841BD /* DatabaseManager.swift in Sources */,
 				35A39B2F280E10E0007D6064 /* AddNewInterviewVC.swift in Sources */,
+				35653B3B28231BB3006A0A0A /* SuccesfullyCreatedAccountVC.swift in Sources */,
+				35FDD0C52825D226000215D8 /* InterviewCell.swift in Sources */,
 				A7BF17062811DC7D006F58FA /* SimpleRecordingVC.swift in Sources */,
 				35A39B2B280E0B15007D6064 /* CalendarVC.swift in Sources */,
 				A70079B9281498B400A841BD /* WelcomeVC.swift in Sources */,
-				35A39B29280E08F4007D6064 /* InterviewersTVC.swift in Sources */,
-				35A39B2D280E0BD5007D6064 /* MyInterviewsTVC.swift in Sources */,
+				35A39B29280E08F4007D6064 /* IntervieweesTVC.swift in Sources */,
 				35F2F01C280DFB1600B55B74 /* AccountTVC.swift in Sources */,
+				35653B392823158B006A0A0A /* AddProfilePictureVC.swift in Sources */,
+				35D8AEE42821285A004D234A /* SignInVC.swift in Sources */,
+				35E63DBB2825DF4500140B0B /* MyInterviewsVC.swift in Sources */,
 				A70079AE2814883000A841BD /* Users.swift in Sources */,
 				35A39B35280E1E6E007D6064 /* NewInterviewView.swift in Sources */,
 				35F2F006280DF50500B55B74 /* SceneDelegate.swift in Sources */,
 				A7BF170828130929006F58FA /* Interview.swift in Sources */,
-				A70079B32814944F00A841BD /* CreateNewAccountVC.swift in Sources */,
+				A70079B32814944F00A841BD /* SignUpVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

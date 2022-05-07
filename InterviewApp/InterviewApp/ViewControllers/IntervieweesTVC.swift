@@ -1,5 +1,5 @@
 //
-//  MyInterviewsTVC.swift
+//  Interviewers.swift
 //  InterviewApp
 //
 //  Created by Valya on 19.04.22.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class MyInterviewsTVC: UIViewController {
+class IntervieweesTVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.delegate = UIApplication.shared.delegate as? UITabBarControllerDelegate
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

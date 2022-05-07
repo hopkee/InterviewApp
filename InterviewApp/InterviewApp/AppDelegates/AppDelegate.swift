@@ -11,6 +11,8 @@ import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegate {
 
+//    var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UITabBar.appearance().backgroundColor = UIColor(red: 0 / 255, green: 99 / 255, blue: 193 / 255, alpha: 1)
         UITabBar.appearance().tintColor = .white

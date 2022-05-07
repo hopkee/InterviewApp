@@ -8,7 +8,12 @@
 import UIKit
 
 class AccountTVC: UIViewController {
-
+    
+    @IBAction func logoutBtnAction(_ sender: UIButton) {
+        AuthManager.shared.logoutUser()
+        showAuthorizationVC()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +22,13 @@ class AccountTVC: UIViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    private func showAuthorizationVC() {
+        let authorizationFlow = UIStoryboard(name: "AuthorizationFlow", bundle: nil)
+        guard let authVC = authorizationFlow.instantiateViewController(withIdentifier: "AuthMainVC") as? WelcomeVC else { return }
+        authVC.modalPresentationStyle = .fullScreen
+        self.present(authVC, animated: true)
     }
 
     // MARK: - Table view data source
