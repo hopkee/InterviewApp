@@ -6,32 +6,31 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseAuth
 
 final class AuthManager {
     
     static let shared = AuthManager()
-    var signedUserUuId: String?
-    
-    private var userDefaults = UserDefaults()
+
     private init() {}
     
-    func loginUser(uuid: String) {
-        userDefaults.set(uuid, forKey: "signedUserUuId")
-        signedUserUuId = uuid
+    func loginUser(user: User?) {
+        if let user = user {
+            Auth.auth().signIn(withEmail: user.email, password: user.password)
+        }
+    }
+    
+    func loginWith(email: String, password: String) {
+            Auth.auth().signIn(withEmail: email, password: password)
     }
     
     func logoutUser() {
-        userDefaults.removeObject(forKey: "signedUserUuId")
-        signedUserUuId = nil
+        try! Auth.auth().signOut()
     }
     
-    func isUserSignedIn() -> Bool {
-        if let uuid = userDefaults.string(forKey: "signedUserUuId") {
-            signedUserUuId = uuid
-            return true
-        } else {
-            return false
+    func createUser(user: User?) {
+        if let user = user {
+            Auth.auth().createUser(withEmail: user.email, password: user.password)
         }
     }
     

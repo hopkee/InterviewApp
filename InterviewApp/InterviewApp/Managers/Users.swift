@@ -13,8 +13,8 @@ struct User {
     var name: String
     var surname: String?
     var email: String
-    var uid: String
+    var password: String
+    var uid: String?
     var photo: UIImage?
-    var userAppSettings: String
     
 }

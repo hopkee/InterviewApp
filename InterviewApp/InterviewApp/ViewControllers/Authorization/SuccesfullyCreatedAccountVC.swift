@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCore
 
 class SuccesfullyCreatedAccountVC: UIViewController {
     
@@ -13,20 +14,16 @@ class SuccesfullyCreatedAccountVC: UIViewController {
     @IBOutlet weak var getIntoAppBtnOutlet: UIButton!
     
     @IBAction func getIntoAppBtn(_ sender: Any) {
+        AuthManager.shared.createUser(user: user)
         dismiss(animated: true)
+        AuthManager.shared.loginUser(user: user)
     }
     
-    var goToMainScreen: (() -> ())?
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        if let closure = goToMainScreen {
-            closure()
-        }
     }
     
     private func setupUI() {

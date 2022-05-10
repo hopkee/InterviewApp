@@ -11,7 +11,7 @@ class AccountTVC: UIViewController {
     
     @IBAction func logoutBtnAction(_ sender: UIButton) {
         AuthManager.shared.logoutUser()
-        showAuthorizationVC()
+//        showAuthorizationVC()
     }
     
     override func viewDidLoad() {

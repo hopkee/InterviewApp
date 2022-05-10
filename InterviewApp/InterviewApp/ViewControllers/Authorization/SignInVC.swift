@@ -19,6 +19,11 @@ class SignInVC: UIViewController {
     }
     
     @IBAction func signInBtnAction(_ sender: UIButton) {
+        if let email = emailTFOutlet.text,
+           let password = passwordTFOutlet.text {
+            dismiss(animated: true)
+            AuthManager.shared.loginWith(email: email, password: password)
+        }
     }
     
     override func viewDidLoad() {

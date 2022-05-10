@@ -140,7 +140,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="iYd-DI-m1l">
-                                <rect key="frame" x="40" y="106" width="334" height="393.5"/>
+                                <rect key="frame" x="40" y="106" width="334" height="440.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZJ-Sc-CPB">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="33.5"/>
@@ -177,6 +177,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="passwordTFAction:" destination="SsQ-U2-cSF" eventType="valueChanged" id="TlT-H5-RwQ"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ky-4U-tun">
                                         <rect key="frame" x="0.0" y="276.5" width="334" height="45"/>
@@ -186,8 +189,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giM-Yq-wFc">
+                                        <rect key="frame" x="0.0" y="348.5" width="334" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.23630755510000001" blue="0.1682198939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mey-1M-iKv">
-                                        <rect key="frame" x="0.0" y="348.5" width="334" height="45"/>
+                                        <rect key="frame" x="0.0" y="395.5" width="334" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="vx6-Ec-SH1"/>
                                         </constraints>
@@ -198,7 +207,7 @@
                                             <color key="baseBackgroundColor" red="0.13422125579999999" green="0.38804036380000001" blue="0.75802117589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="F5A-0W-GeR" kind="show" id="zHI-mw-1Js"/>
+                                            <action selector="createBtnAction:" destination="SsQ-U2-cSF" eventType="touchUpInside" id="fnx-Mb-CPB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -224,9 +233,11 @@
                         <outlet property="confirmPassTFOutlet" destination="6ky-4U-tun" id="3qK-ik-nEt"/>
                         <outlet property="createBtnOutlet" destination="Mey-1M-iKv" id="RrY-9b-hcQ"/>
                         <outlet property="emailTFOutlet" destination="SHM-AR-cGl" id="QEr-9G-5LB"/>
+                        <outlet property="errorMsgOutlet" destination="giM-Yq-wFc" id="0Y3-Wg-yCA"/>
                         <outlet property="nameTFOutlet" destination="d93-E7-mY7" id="P7m-xR-NTy"/>
                         <outlet property="passwordTFOutlet" destination="8xc-kp-2Pq" id="BFH-d5-Ghb"/>
                         <outlet property="welcomeMsgLbl" destination="TZJ-Sc-CPB" id="0qj-df-7YL"/>
+                        <segue destination="F5A-0W-GeR" kind="show" identifier="GoToProfilePictureSelectingScreen" id="R7k-vc-Mpk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g91-xU-2Yl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -262,11 +273,14 @@
                                             <constraint firstAttribute="height" constant="45" id="0VV-Y1-mg5"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Add">
+                                        <buttonConfiguration key="configuration" style="filled" title="Add to profile">
                                             <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.13422125579999999" green="0.38804036380000001" blue="0.75802117589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addPhotoBtnAction" destination="F5A-0W-GeR" eventType="touchUpInside" id="BnL-ma-8mk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lE1-8r-bSL">
                                         <rect key="frame" x="0.0" y="472.5" width="334" height="45"/>
@@ -281,7 +295,7 @@
                                             <color key="baseBackgroundColor" red="0.85342687370000003" green="0.92056494950000001" blue="0.99549871680000002" alpha="0.50026758459230136" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="EUM-AP-ANh" kind="show" id="Exf-Ar-jJH"/>
+                                            <action selector="createBtnAction" destination="F5A-0W-GeR" eventType="touchUpInside" id="3Ip-w7-Rd3"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -307,6 +321,7 @@
                         <outlet property="addPictureBtnOutlet" destination="2Xt-Jm-C2Q" id="tcs-5s-aSM"/>
                         <outlet property="profilePicture" destination="DBb-X4-JN3" id="s0E-KM-SL4"/>
                         <outlet property="skipBtnOutlet" destination="lE1-8r-bSL" id="9WM-9M-muC"/>
+                        <segue destination="EUM-AP-ANh" kind="show" identifier="GoToSuccessScreen" id="DDU-5E-3sd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSb-3F-4DJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

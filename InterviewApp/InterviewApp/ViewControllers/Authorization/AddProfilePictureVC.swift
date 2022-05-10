@@ -14,13 +14,20 @@ class AddProfilePictureVC: UIViewController {
     @IBOutlet weak var addPictureBtnOutlet: UIButton!
     @IBOutlet weak var skipBtnOutlet: UIButton!
     
+    @IBAction func addPhotoBtnAction() {
+        addPhotoInUserModel()
+    }
+    
+    @IBAction func createBtnAction() {
+        performSegue(withIdentifier: "GoToSuccessScreen", sender: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
     
-    var goToMainScreen: (() -> ())?
+    var user: User?
     
     private func setupUI() {
         let defaultUserPicture = UIImage(imageLiteralResourceName: "defualtUserPicture")
@@ -33,9 +40,15 @@ class AddProfilePictureVC: UIViewController {
         skipBtnOutlet.layer.cornerRadius = 22
     }
     
+    private func addPhotoInUserModel() {
+        user?.photo = profilePicture.image
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let successfullyCreatedAccountVC = segue.destination as? SuccesfullyCreatedAccountVC else { return }
-        successfullyCreatedAccountVC.goToMainScreen = goToMainScreen
+        if segue.identifier == "GoToSuccessScreen" {
+            guard let successfullyCreatedAccountVC = segue.destination as? SuccesfullyCreatedAccountVC else { return }
+            successfullyCreatedAccountVC.user = user
+        }
     }
 
 }
