@@ -27,7 +27,7 @@ class InterviewCell: UITableViewCell {
             }
             set (newFrame) {
                 var frame = newFrame
-                let newWidth = frame.width * 0.95 // get 80% width here
+                let newWidth = frame.width * 0.95
                 let space = (frame.width - newWidth) / 2
                 frame.size.width = newWidth
                 frame.origin.x += space
@@ -39,8 +39,6 @@ class InterviewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     private func setUpUI() {

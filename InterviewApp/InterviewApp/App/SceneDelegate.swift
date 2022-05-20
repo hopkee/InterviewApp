@@ -17,44 +17,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
-//        if AuthManager.shared.isUserSignedIn() {
-//
-//            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let mainTabBar: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "MainTabBar")
-//            self.window?.rootViewController = mainTabBar
-//            self.window?.makeKeyAndVisible()
-//
-//            } else {
-//                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                let mainTabBar: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "MainTabBar")
-//                let authFlowStoryboard: UIStoryboard = UIStoryboard(name: "AuthorizationFlow", bundle: nil)
-//                let authMainVC: UIViewController = authFlowStoryboard.instantiateViewController(withIdentifier: "AuthMainVC")
-//
-//                self.window?.rootViewController = authMainVC
-//                self.window?.makeKeyAndVisible()
-//                self.window?.rootViewController = mainTabBar
-//                authMainVC.modalPresentationStyle = .fullScreen
-//                self.window?.rootViewController?.present(authMainVC, animated: false)
-//            }
-        
-//        if Auth.auth().currentUser != nil {
-//            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let mainTabBar: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "MainTabBar")
-//            self.window?.rootViewController = mainTabBar
-//            self.window?.makeKeyAndVisible()
-//        } else {
-//            let mainStoryboard: UIStoryboard = UIStoryboard(name: "AuthorizationFlow", bundle: nil)
-//            let welcomeVC: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "AuthMainVC")
-//            self.window?.rootViewController = welcomeVC
-//            self.window?.makeKeyAndVisible()
-//        }
-        
         Auth.auth().addStateDidChangeListener { auth, user in
             if user != nil {
                 let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let mainTabBar: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "MainTabBar")
                 self.window?.rootViewController = mainTabBar
                 self.window?.makeKeyAndVisible()
+                
             } else {
                 let mainStoryboard: UIStoryboard = UIStoryboard(name: "AuthorizationFlow", bundle: nil)
                 let welcomeVC: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "AuthMainVC")

@@ -69,22 +69,6 @@
             </objects>
             <point key="canvasLocation" x="5934.7826086956529" y="-650.22321428571422"/>
         </scene>
-        <!--Interviewees-->
-        <scene sceneID="aJs-WS-j5v">
-            <objects>
-                <viewController id="hKM-DL-eh4" customClass="IntervieweesTVC" customModule="InterviewApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bWA-iR-zHv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="JZ6-E2-uN2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Interviewees" image="person.crop.square" catalog="system" id="VFv-AK-WGw"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o7f-qw-MPP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4109" y="60"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="q4e-Y7-dGu">
             <objects>
@@ -94,13 +78,32 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ddn-54-5t3">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.0" green="0.38823529411764707" blue="0.75686274509803919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.38823529410000002" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" red="0.0" green="0.38823529410000002" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <tabBarItemAppearance key="stackedLayoutAppearance">
+                                <tabBarItemStateAppearance key="normal">
+                                    <textAttributes key="titleTextAttributes">
+                                        <color key="textColor" systemColor="systemGray4Color"/>
+                                    </textAttributes>
+                                    <color key="iconColor" systemColor="systemGray4Color"/>
+                                </tabBarItemStateAppearance>
+                                <tabBarItemStateAppearance key="selected">
+                                    <textAttributes key="titleTextAttributes">
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </textAttributes>
+                                    <color key="iconColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tabBarItemStateAppearance>
+                                <tabBarItemStateAppearance key="disabled"/>
+                                <tabBarItemStateAppearance key="focused"/>
+                            </tabBarItemAppearance>
+                            <color key="selectionIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tabBarAppearance>
                     </tabBar>
                     <connections>
                         <segue destination="yoq-ua-jkF" kind="relationship" relationship="viewControllers" id="htB-pE-5Iz"/>
-                        <segue destination="hKM-DL-eh4" kind="relationship" relationship="viewControllers" id="BEe-1l-rcs"/>
+                        <segue destination="bv2-NQ-xsj" kind="relationship" relationship="viewControllers" id="BEe-1l-rcs"/>
                         <segue destination="AwJ-Ds-GT0" kind="relationship" relationship="viewControllers" id="U2A-3P-MNo"/>
                         <segue destination="a97-sg-BT8" kind="relationship" relationship="viewControllers" id="3Lm-A0-k8x"/>
                         <segue destination="yRF-8L-qVg" kind="relationship" relationship="viewControllers" id="LgF-T2-CIw"/>
@@ -275,6 +278,91 @@
             </objects>
             <point key="canvasLocation" x="4115.9420289855079" y="-650.22321428571422"/>
         </scene>
+        <!--Interviewees-->
+        <scene sceneID="EOT-W8-8sb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bv2-NQ-xsj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Interviewees" image="person.crop.square" catalog="system" id="VFv-AK-WGw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VWv-6e-A76">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" red="0.0" green="0.38823529410000002" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textAttributes key="titleTextAttributes">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.0" green="0.38823529410000002" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textAttributes key="titleTextAttributes">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wGy-Sv-jTS" kind="relationship" relationship="rootViewController" id="AY3-2H-XEj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jI-GQ-Lvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4108.695652173913" y="59.598214285714285"/>
+        </scene>
+        <!--Interviewees-->
+        <scene sceneID="5gk-hM-E5X">
+            <objects>
+                <tableViewController id="wGy-Sv-jTS" customClass="IntervieweesTVC" customModule="InterviewApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Qwu-ol-Rth">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IntervieweeCell" id="EEb-os-s7t" customClass="IntervieweeCell" customModule="InterviewApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EEb-os-s7t" id="odk-YE-hNR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SC-hQ-xry">
+                                            <rect key="frame" x="20" y="11.5" width="394" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0SC-hQ-xry" firstAttribute="leading" secondItem="odk-YE-hNR" secondAttribute="leading" constant="20" id="Gib-7m-nJU"/>
+                                        <constraint firstAttribute="trailing" secondItem="0SC-hQ-xry" secondAttribute="trailing" id="kFT-of-Y1Y"/>
+                                        <constraint firstItem="0SC-hQ-xry" firstAttribute="centerY" secondItem="odk-YE-hNR" secondAttribute="centerY" id="nQt-uS-5fg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="intervieweeName" destination="0SC-hQ-xry" id="OnY-af-508"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wGy-Sv-jTS" id="eHR-9U-Y3H"/>
+                            <outlet property="delegate" destination="wGy-Sv-jTS" id="gs3-SQ-D4T"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Interviewees" id="0XD-eY-rq0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="d2U-C1-1ZJ">
+                            <connections>
+                                <action selector="addNewInterveweeAction:" destination="wGy-Sv-jTS" id="WEb-Wh-ONk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WVo-fG-4cj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5026" y="60"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bubble.left.and.bubble.right" catalog="system" width="128" height="96"/>
@@ -284,6 +372,9 @@
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

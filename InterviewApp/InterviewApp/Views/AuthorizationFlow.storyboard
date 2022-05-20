@@ -29,7 +29,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="plU-Jd-ilT">
                                         <rect key="frame" x="35" y="227" width="344" height="136.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjA-dg-Oc4">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjA-dg-Oc4" customClass="CustomButtons" customModule="InterviewApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="344" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="v1T-7M-x3m"/>
@@ -40,6 +40,9 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" red="0.13422125579999999" green="0.38804036380000001" blue="0.75802117589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="button" value="primaryButton"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <segue destination="4bz-5n-bym" kind="presentation" id="pWk-95-asw"/>
                                                 </connections>
@@ -53,18 +56,22 @@
                                                 <color key="textColor" red="0.13422125579999999" green="0.38804036380000001" blue="0.75802117589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmH-Fy-4qq">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmH-Fy-4qq" customClass="CustomButtons" customModule="InterviewApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="91.5" width="344" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="5B2-Om-2Lh"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Sign Up"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up">
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
-                                                    <color key="baseForegroundColor" red="0.13422125579999999" green="0.38804036380000001" blue="0.75802117589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <color key="baseBackgroundColor" red="0.85342687370000003" green="0.92056494950000001" blue="0.99549871680000002" alpha="0.50199516245860931" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="baseForegroundColor" red="0.0" green="0.38823529410000002" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="baseBackgroundColor" red="0.85342687370000003" green="0.92056494950000001" blue="0.99549871680000002" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="button" value="secondaryButton"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <segue destination="C6f-D2-M7j" kind="presentation" identifier="GoToSignUp" id="ORa-E7-yNT"/>
                                                 </connections>
@@ -148,46 +155,62 @@
                                         <color key="textColor" red="0.13422125579999999" green="0.38804036380000001" blue="0.75802117589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d93-E7-mY7">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d93-E7-mY7" customClass="CustomTextFields" customModule="InterviewApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="60.5" width="334" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="L0w-zG-MJo"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="customTextField" value="Name"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="customTextFieldTitle" value="Name"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="nameTFAction:" destination="SsQ-U2-cSF" eventType="editingDidEnd" id="1TK-IE-Obg"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SHM-AR-cGl">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SHM-AR-cGl" customClass="CustomTextFields" customModule="InterviewApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="132.5" width="334" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="MWv-bJ-w8u"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="customTextField" value="Email"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="customTextFieldTitle" value="Email"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="emailTFAction:" destination="SsQ-U2-cSF" eventType="editingDidEnd" id="GnJ-zA-vpu"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8xc-kp-2Pq">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8xc-kp-2Pq" customClass="CustomTextFields" customModule="InterviewApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="204.5" width="334" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="XA8-vz-9BZ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="customTextField" value="Password"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="customTextFieldTitle" value="Password"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="passwordTFAction:" destination="SsQ-U2-cSF" eventType="valueChanged" id="TlT-H5-RwQ"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ky-4U-tun">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ky-4U-tun" customClass="CustomTextFields" customModule="InterviewApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="276.5" width="334" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="GOa-5p-afu"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="customTextField" value="Confirm password"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="customTextFieldTitle" value="Confirm password"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giM-Yq-wFc">
                                         <rect key="frame" x="0.0" y="348.5" width="334" height="20"/>
@@ -195,7 +218,7 @@
                                         <color key="textColor" red="1" green="0.23630755510000001" blue="0.1682198939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mey-1M-iKv">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mey-1M-iKv" customClass="CustomButtons" customModule="InterviewApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="395.5" width="334" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="vx6-Ec-SH1"/>
@@ -206,6 +229,9 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.13422125579999999" green="0.38804036380000001" blue="0.75802117589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="button" value="primaryButton"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="createBtnAction:" destination="SsQ-U2-cSF" eventType="touchUpInside" id="fnx-Mb-CPB"/>
                                         </connections>
@@ -617,6 +643,29 @@
             <point key="canvasLocation" x="888" y="-256"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="6ky-4U-tun">
+            <size key="intrinsicContentSize" width="170" height="34"/>
+        </designable>
+        <designable name="8xc-kp-2Pq">
+            <size key="intrinsicContentSize" width="109" height="34"/>
+        </designable>
+        <designable name="GmH-Fy-4qq">
+            <size key="intrinsicContentSize" width="90.5" height="35.5"/>
+        </designable>
+        <designable name="Mey-1M-iKv">
+            <size key="intrinsicContentSize" width="79.5" height="35.5"/>
+        </designable>
+        <designable name="SHM-AR-cGl">
+            <size key="intrinsicContentSize" width="78" height="34"/>
+        </designable>
+        <designable name="d93-E7-mY7">
+            <size key="intrinsicContentSize" width="80" height="34"/>
+        </designable>
+        <designable name="fjA-dg-Oc4">
+            <size key="intrinsicContentSize" width="81.5" height="35.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="multiply.circle" catalog="system" width="128" height="121"/>
         <image name="welcomeBackground" width="5607" height="3738"/>

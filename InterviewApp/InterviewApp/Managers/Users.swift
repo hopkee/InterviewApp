@@ -7,14 +7,34 @@
 
 import Foundation
 import UIKit
+import FirebaseAuth
 
-struct User {
-    
+struct User: Encodable {
     var name: String
-    var surname: String?
     var email: String
-    var password: String
+    var password: String?
     var uid: String?
-    var photo: UIImage?
+    var photoUrl: URL?
     
+    init(name: String, email: String, password: String) {
+        self.name = name
+        self.email = email
+        self.password = password
+    }
+    
+    init(name: String, email: String, password: String, uid: String) {
+        self.name = name
+        self.email = email
+        self.password = password
+        self.uid = uid
+    }
+    
+    init(name: String, email: String, password: String, uid: String, photoUrl: URL) {
+        self.name = name
+        self.email = email
+        self.password = password
+        self.uid = uid
+        self.photoUrl = photoUrl
+    }
 }
+

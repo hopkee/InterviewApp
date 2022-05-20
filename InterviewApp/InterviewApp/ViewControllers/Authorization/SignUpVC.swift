@@ -70,7 +70,6 @@ final class SignUpVC: UIViewController {
     }
     
     private func checkAllFieldsForEmpty() -> Bool {
-        
         if let _ = nameTFOutlet.text,
            let _ = emailTFOutlet.text,
            let _ = passwordTFOutlet.text,
@@ -79,7 +78,6 @@ final class SignUpVC: UIViewController {
         } else {
             return false
         }
-        
     }
     
     private func createUserModel() -> User {

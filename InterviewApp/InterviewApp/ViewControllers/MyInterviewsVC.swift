@@ -12,7 +12,7 @@ class MyInterviewsVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
-    let interviewOne = Interview(title: "My first important interview", date: Date(), duration: 2, interviewer: Interviewer(name: "Valentin Velichko", notes: "nil"), notes: "nil")
+    let interviewOne = Interview(title: "My first important interview", date: Date(), startDate: Date(), duration: 2, interviewee: Interviewee(name: "Valentin Velichko", notes: "nil", phone: "phone", email: "val@mail.com"), notes: "nil")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ extension MyInterviewsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InterviewCell", for: indexPath) as? InterviewCell
         cell!.nameOfInterviewLblOutlet.text = interviewOne.title
-        cell!.nameOfIntervieweeOutlet.text = interviewOne.interviewer?.name
+        cell!.nameOfIntervieweeOutlet.text = interviewOne.interviewee?.name
         cell!.dateOfInterviewOutlet.text = interviewOne.date.description
         return cell!
     }

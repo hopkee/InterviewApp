@@ -14,14 +14,6 @@ class WelcomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpUI()
-    }
-    
-    private func setUpUI() {
-        signUpBtnOutlet.clipsToBounds = true
-        signUpBtnOutlet.layer.cornerRadius = 22
-        signInBtnOutlet.clipsToBounds = true
-        signInBtnOutlet.layer.cornerRadius = 22
     }
 
 }

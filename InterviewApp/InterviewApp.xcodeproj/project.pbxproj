@@ -11,7 +11,6 @@
 		3557F8DB282AA85500DC14C0 /* InterviewProcess.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3557F8DA282AA85500DC14C0 /* InterviewProcess.storyboard */; };
 		35653B392823158B006A0A0A /* AddProfilePictureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35653B382823158B006A0A0A /* AddProfilePictureVC.swift */; };
 		35653B3B28231BB3006A0A0A /* SuccesfullyCreatedAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35653B3A28231BB3006A0A0A /* SuccesfullyCreatedAccountVC.swift */; };
-		35A39B29280E08F4007D6064 /* IntervieweesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A39B28280E08F4007D6064 /* IntervieweesTVC.swift */; };
 		35A39B2B280E0B15007D6064 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A39B2A280E0B15007D6064 /* CalendarVC.swift */; };
 		35A39B2F280E10E0007D6064 /* AddNewInterviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A39B2E280E10E0007D6064 /* AddNewInterviewVC.swift */; };
 		35A39B35280E1E6E007D6064 /* NewInterviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A39B34280E1E6E007D6064 /* NewInterviewView.swift */; };
@@ -35,10 +34,15 @@
 		A70079B32814944F00A841BD /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70079B22814944F00A841BD /* SignUpVC.swift */; };
 		A70079B72814989600A841BD /* AuthorizationFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70079B62814989600A841BD /* AuthorizationFlow.storyboard */; };
 		A70079B9281498B400A841BD /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70079B8281498B400A841BD /* WelcomeVC.swift */; };
+		A72686B1282AEEBC009F46CE /* CustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72686B0282AEEBC009F46CE /* CustomTextFields.swift */; };
+		A7ABCB942832FB80005A44D3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ABCB932832FB80005A44D3 /* Extensions.swift */; };
 		A7B22747282679C6001373FA /* DetailInterviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B22746282679C6001373FA /* DetailInterviewVC.swift */; };
 		A7BF17062811DC7D006F58FA /* SimpleRecordingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF17052811DC7D006F58FA /* SimpleRecordingVC.swift */; };
 		A7BF170828130929006F58FA /* Interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BF170728130929006F58FA /* Interview.swift */; };
 		A7BF170A28146F08006F58FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7BF170928146F08006F58FA /* GoogleService-Info.plist */; };
+		A7FD40A2282BCDA400DA957F /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD40A1282BCDA400DA957F /* CustomButtons.swift */; };
+		A7FD40AC282C534700DA957F /* IntervieweesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD40AB282C534700DA957F /* IntervieweesTVC.swift */; };
+		A7FD40AE282C542900DA957F /* IntervieweeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD40AD282C542900DA957F /* IntervieweeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +50,6 @@
 		3557F8DA282AA85500DC14C0 /* InterviewProcess.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InterviewProcess.storyboard; sourceTree = "<group>"; };
 		35653B382823158B006A0A0A /* AddProfilePictureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProfilePictureVC.swift; sourceTree = "<group>"; };
 		35653B3A28231BB3006A0A0A /* SuccesfullyCreatedAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccesfullyCreatedAccountVC.swift; sourceTree = "<group>"; };
-		35A39B28280E08F4007D6064 /* IntervieweesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervieweesTVC.swift; sourceTree = "<group>"; };
 		35A39B2A280E0B15007D6064 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		35A39B2E280E10E0007D6064 /* AddNewInterviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewInterviewVC.swift; sourceTree = "<group>"; };
 		35A39B34280E1E6E007D6064 /* NewInterviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInterviewView.swift; sourceTree = "<group>"; };
@@ -68,10 +71,15 @@
 		A70079B22814944F00A841BD /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		A70079B62814989600A841BD /* AuthorizationFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorizationFlow.storyboard; sourceTree = "<group>"; };
 		A70079B8281498B400A841BD /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		A72686B0282AEEBC009F46CE /* CustomTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFields.swift; sourceTree = "<group>"; };
+		A7ABCB932832FB80005A44D3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A7B22746282679C6001373FA /* DetailInterviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInterviewVC.swift; sourceTree = "<group>"; };
 		A7BF17052811DC7D006F58FA /* SimpleRecordingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRecordingVC.swift; sourceTree = "<group>"; };
 		A7BF170728130929006F58FA /* Interview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Interview.swift; path = InterviewApp/ViewControllers/Interview.swift; sourceTree = SOURCE_ROOT; };
 		A7BF170928146F08006F58FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A7FD40A1282BCDA400DA957F /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
+		A7FD40AB282C534700DA957F /* IntervieweesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervieweesTVC.swift; sourceTree = "<group>"; };
+		A7FD40AD282C542900DA957F /* IntervieweeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervieweeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,12 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		35A619302827D2000086E302 /* UI Settings */ = {
+		35A619302827D2000086E302 /* UICustomElemrnts */ = {
 			isa = PBXGroup;
 			children = (
 				35DA4ED5282A5664000DED1D /* SIgnUp.swift */,
+				A72686B0282AEEBC009F46CE /* CustomTextFields.swift */,
+				A7FD40A1282BCDA400DA957F /* CustomButtons.swift */,
 			);
-			path = "UI Settings";
+			path = UICustomElemrnts;
 			sourceTree = "<group>";
 		};
 		35F2EFF7280DF50400B55B74 = {
@@ -116,9 +126,9 @@
 		35F2F002280DF50400B55B74 /* InterviewApp */ = {
 			isa = PBXGroup;
 			children = (
-				35A619302827D2000086E302 /* UI Settings */,
+				35A619302827D2000086E302 /* UICustomElemrnts */,
 				A70079A82814848000A841BD /* Managers */,
-				35F2F017280DFA5A00B55B74 /* AppDelegates */,
+				35F2F017280DFA5A00B55B74 /* App */,
 				35F2F01A280DFA9A00B55B74 /* Models */,
 				35F2F018280DFA6D00B55B74 /* ViewControllers */,
 				35F2F019280DFA8B00B55B74 /* Views */,
@@ -129,13 +139,14 @@
 			path = InterviewApp;
 			sourceTree = "<group>";
 		};
-		35F2F017280DFA5A00B55B74 /* AppDelegates */ = {
+		35F2F017280DFA5A00B55B74 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				35F2F003280DF50500B55B74 /* AppDelegate.swift */,
 				35F2F005280DF50500B55B74 /* SceneDelegate.swift */,
+				A7ABCB932832FB80005A44D3 /* Extensions.swift */,
 			);
-			path = AppDelegates;
+			path = App;
 			sourceTree = "<group>";
 		};
 		35F2F018280DFA6D00B55B74 /* ViewControllers */ = {
@@ -144,7 +155,7 @@
 				35FDD0C72825D238000215D8 /* Cells */,
 				A70079AF281490F800A841BD /* Authorization */,
 				35E63DBA2825DF4500140B0B /* MyInterviewsVC.swift */,
-				35A39B28280E08F4007D6064 /* IntervieweesTVC.swift */,
+				A7FD40AB282C534700DA957F /* IntervieweesTVC.swift */,
 				35A39B2E280E10E0007D6064 /* AddNewInterviewVC.swift */,
 				35F2F01B280DFB1600B55B74 /* AccountTVC.swift */,
 				35A39B2A280E0B15007D6064 /* CalendarVC.swift */,
@@ -180,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				35FDD0C32825D226000215D8 /* InterviewCell.swift */,
+				A7FD40AD282C542900DA957F /* IntervieweeCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -297,17 +309,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7FD40A2282BCDA400DA957F /* CustomButtons.swift in Sources */,
 				35F2F004280DF50500B55B74 /* AppDelegate.swift in Sources */,
+				A7FD40AC282C534700DA957F /* IntervieweesTVC.swift in Sources */,
 				A70079AC2814881900A841BD /* AuthManager.swift in Sources */,
 				A70079AA2814854E00A841BD /* DatabaseManager.swift in Sources */,
 				35A39B2F280E10E0007D6064 /* AddNewInterviewVC.swift in Sources */,
 				35653B3B28231BB3006A0A0A /* SuccesfullyCreatedAccountVC.swift in Sources */,
 				35FDD0C52825D226000215D8 /* InterviewCell.swift in Sources */,
 				A7BF17062811DC7D006F58FA /* SimpleRecordingVC.swift in Sources */,
+				A72686B1282AEEBC009F46CE /* CustomTextFields.swift in Sources */,
 				35A39B2B280E0B15007D6064 /* CalendarVC.swift in Sources */,
 				A70079B9281498B400A841BD /* WelcomeVC.swift in Sources */,
 				35DA4ED6282A5664000DED1D /* SIgnUp.swift in Sources */,
-				35A39B29280E08F4007D6064 /* IntervieweesTVC.swift in Sources */,
 				35F2F01C280DFB1600B55B74 /* AccountTVC.swift in Sources */,
 				35653B392823158B006A0A0A /* AddProfilePictureVC.swift in Sources */,
 				35D8AEE42821285A004D234A /* SignInVC.swift in Sources */,
@@ -315,9 +329,11 @@
 				A70079AE2814883000A841BD /* Users.swift in Sources */,
 				35A39B35280E1E6E007D6064 /* NewInterviewView.swift in Sources */,
 				35F2F006280DF50500B55B74 /* SceneDelegate.swift in Sources */,
+				A7ABCB942832FB80005A44D3 /* Extensions.swift in Sources */,
 				A7BF170828130929006F58FA /* Interview.swift in Sources */,
 				A70079B32814944F00A841BD /* SignUpVC.swift in Sources */,
 				A7B22747282679C6001373FA /* DetailInterviewVC.swift in Sources */,
+				A7FD40AE282C542900DA957F /* IntervieweeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

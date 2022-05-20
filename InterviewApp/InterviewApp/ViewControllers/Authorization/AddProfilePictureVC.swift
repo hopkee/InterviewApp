@@ -41,7 +41,7 @@ class AddProfilePictureVC: UIViewController {
     }
     
     private func addPhotoInUserModel() {
-        user?.photo = profilePicture.image
+//        user?.photo = profilePicture.image
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
