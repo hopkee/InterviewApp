@@ -99,7 +99,7 @@
                                                 <color key="textColor" red="0.13422125579999999" green="0.38804036380000001" blue="0.75802117589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taking an interview has never been so easily" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18a-xn-8tG">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taking an interview has never been so easy" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18a-xn-8tG">
                                                 <rect key="frame" x="0.0" y="95" width="344" height="42"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                 <color key="textColor" red="0.13422125579999999" green="0.38804036380000001" blue="0.75802117589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -293,7 +293,7 @@
                                             <constraint firstAttribute="width" secondItem="DBb-X4-JN3" secondAttribute="height" multiplier="1:1" id="quH-7P-qcg"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xt-Jm-C2Q">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xt-Jm-C2Q" customClass="CustomButtons" customModule="InterviewApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="407.5" width="334" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="0VV-Y1-mg5"/>
@@ -304,11 +304,14 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.13422125579999999" green="0.38804036380000001" blue="0.75802117589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="button" value="primaryButton"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="addPhotoBtnAction" destination="F5A-0W-GeR" eventType="touchUpInside" id="BnL-ma-8mk"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lE1-8r-bSL">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lE1-8r-bSL" customClass="CustomButtons" customModule="InterviewApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="472.5" width="334" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="WFb-h5-48s"/>
@@ -320,6 +323,9 @@
                                             <color key="baseForegroundColor" red="0.13422125579999999" green="0.38804036380000001" blue="0.75802117589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" red="0.85342687370000003" green="0.92056494950000001" blue="0.99549871680000002" alpha="0.50026758459230136" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="button" value="secondaryButton"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="createBtnAction" destination="F5A-0W-GeR" eventType="touchUpInside" id="3Ip-w7-Rd3"/>
                                         </connections>
@@ -378,7 +384,7 @@
                                             <constraint firstAttribute="width" constant="150" id="mI2-4G-cl8"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehv-JJ-oIy">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehv-JJ-oIy" customClass="CustomButtons" customModule="InterviewApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="347" width="334" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="xAp-ks-WLo"/>
@@ -389,6 +395,9 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.13422125579999999" green="0.38804036380000001" blue="0.75802117589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="button" value="primaryButton"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="getIntoAppBtn:" destination="EUM-AP-ANh" eventType="touchUpInside" id="j7v-EG-rFQ"/>
                                         </connections>
@@ -531,23 +540,29 @@
                                         <color key="textColor" red="0.13422125579999999" green="0.38804036380000001" blue="0.75802117589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZCf-5F-5vA">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZCf-5F-5vA" customClass="CustomTextFields" customModule="InterviewApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="60.5" width="334" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="C2c-3f-wvZ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="customTextFieldTitle" value="Email"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y0H-g6-Csd">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y0H-g6-Csd" customClass="CustomTextFields" customModule="InterviewApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="132.5" width="334" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="bQV-Of-QCd"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="customTextFieldTitle" value="Password"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PP5-Mx-sum">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PP5-Mx-sum" customClass="CustomButtons" customModule="InterviewApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="204.5" width="334" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="aCN-9i-T7R"/>
@@ -558,6 +573,9 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.13422125579999999" green="0.38804036380000001" blue="0.75802117589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="button" value="primaryButton"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="signInBtnAction:" destination="YqC-RY-vdc" eventType="touchUpInside" id="PBN-Wo-0hW"/>
                                         </connections>
@@ -644,11 +662,17 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="2Xt-Jm-C2Q">
+            <size key="intrinsicContentSize" width="137" height="35.5"/>
+        </designable>
         <designable name="6ky-4U-tun">
             <size key="intrinsicContentSize" width="170" height="34"/>
         </designable>
         <designable name="8xc-kp-2Pq">
             <size key="intrinsicContentSize" width="109" height="34"/>
+        </designable>
+        <designable name="Ehv-JJ-oIy">
+            <size key="intrinsicContentSize" width="129.5" height="35.5"/>
         </designable>
         <designable name="GmH-Fy-4qq">
             <size key="intrinsicContentSize" width="90.5" height="35.5"/>
@@ -656,7 +680,13 @@
         <designable name="Mey-1M-iKv">
             <size key="intrinsicContentSize" width="79.5" height="35.5"/>
         </designable>
+        <designable name="PP5-Mx-sum">
+            <size key="intrinsicContentSize" width="81.5" height="35.5"/>
+        </designable>
         <designable name="SHM-AR-cGl">
+            <size key="intrinsicContentSize" width="78" height="34"/>
+        </designable>
+        <designable name="ZCf-5F-5vA">
             <size key="intrinsicContentSize" width="78" height="34"/>
         </designable>
         <designable name="d93-E7-mY7">
@@ -664,6 +694,12 @@
         </designable>
         <designable name="fjA-dg-Oc4">
             <size key="intrinsicContentSize" width="81.5" height="35.5"/>
+        </designable>
+        <designable name="lE1-8r-bSL">
+            <size key="intrinsicContentSize" width="61" height="35.5"/>
+        </designable>
+        <designable name="y0H-g6-Csd">
+            <size key="intrinsicContentSize" width="109" height="34"/>
         </designable>
     </designables>
     <resources>

@@ -18,10 +18,18 @@ import SwiftUI
                 configurePrimaryButton()
             case "secondaryButton":
                 configureSecondaryButton()
+            case "verticalAligmentButton":
+                configureVerticalAligmentButton()
             default:
                 break
             }
         }
+    }
+    
+    func setCustomTitle(_ title: String) {
+        configuration?.attributedTitle = AttributedString(NSAttributedString(
+            string: title,
+            attributes: [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue", size: 12.0)!]))
     }
     
     func configurePrimaryButton() {
@@ -29,6 +37,10 @@ import SwiftUI
     }
     
     func configureSecondaryButton() {
+        backgroundColor = UIColor(red: 218 / 255, green: 235 / 255, blue: 254 / 255, alpha: 0.5)
+    }
+    
+    func configureVerticalAligmentButton() {
         backgroundColor = UIColor(red: 218 / 255, green: 235 / 255, blue: 254 / 255, alpha: 0.5)
     }
     

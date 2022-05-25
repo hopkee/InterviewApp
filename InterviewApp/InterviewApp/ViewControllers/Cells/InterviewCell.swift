@@ -44,6 +44,8 @@ class InterviewCell: UITableViewCell {
     private func setUpUI() {
         backgroundOutlet.clipsToBounds = true
         backgroundOutlet.layer.cornerRadius = 15
+        audioIconOutlet.isHidden = true
+        textIconOutlet.isHidden = true
     }
     
 }

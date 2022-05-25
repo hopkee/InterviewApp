@@ -15,5 +15,20 @@ class WelcomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        showOnboardingIfNeedIt()
+    }
+    
+    private func showOnboardingIfNeedIt() {
+        if !(AuthManager.shared.wasOnboardingShownToUser()) {
+            let onboarding = OnboardingVC()
+            onboarding.modalPresentationStyle = .fullScreen
+            self.present(onboarding, animated: false)
+            AuthManager.shared.onboardingWasShown()
+        } else {
+            return
+        }
+    }
+    
 }

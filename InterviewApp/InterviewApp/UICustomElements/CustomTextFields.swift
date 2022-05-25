@@ -25,6 +25,7 @@ import UIKit
         layer.borderWidth = CGFloat(1)
         layer.cornerRadius = 22
         backgroundColor = UIColor(red: 218 / 255, green: 235 / 255, blue: 254 / 255, alpha: 0.5)
+        
     }
     
     func setPlaceholder(_ title: String) {

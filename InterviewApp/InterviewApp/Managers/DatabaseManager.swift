@@ -28,6 +28,12 @@ final class DatabaseManager {
         ref.setValue(intervieweeDictionary)
     }
     
+    func createInterview(uid: String, _ interview: Interview) {
+        let interviewDictionary = interview.toDictionnary
+        let ref = getRef().child("users").child(uid).child("Interviews").child(interview.id)
+        ref.setValue(interviewDictionary)
+    }
+    
     func getAllInterviewees(uid: String, completion: @escaping ([Interviewee]) -> Void) {
         let ref = getRef().child("users").child(uid).child("Interviewees")
         ref.getData(completion: { error, snapshot in
@@ -42,6 +48,42 @@ final class DatabaseManager {
                 interviewees.append(interviewee)
             }
             completion(interviewees)
+        })
+    }
+    
+    func getAllInterviews(uid: String, completion: @escaping ([Interview]) -> Void) {
+        let ref = getRef().child("users").child(uid).child("Interviews")
+        ref.getData(completion: { error, snapshot in
+            var interviews: [Interview] = []
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+              }
+            for item in snapshot.children {
+                guard let snapshot = item as? DataSnapshot,
+                      let interview = Interview(snapshot: snapshot) else { return }
+                interviews.append(interview)
+            }
+            completion(interviews)
+        })
+    }
+    
+    func getUncompletedInterviews(uid: String, completion: @escaping ([Interview]) -> Void) {
+        let ref = getRef().child("users").child(uid).child("Interviews")
+        ref.getData(completion: { error, snapshot in
+            var interviews: [Interview] = []
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+              }
+            for item in snapshot.children {
+                guard let snapshot = item as? DataSnapshot,
+                      let interview = Interview(snapshot: snapshot) else { return }
+                    if !interview.isCompleted {
+                        interviews.append(interview)
+                    }
+            }
+            completion(interviews)
         })
     }
 }

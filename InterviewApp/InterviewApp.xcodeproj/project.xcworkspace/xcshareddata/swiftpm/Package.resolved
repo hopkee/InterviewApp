@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "354dda32d89fc8cd4f5c46487f64957d355f53d8",
+        "version" : "5.6.1"
+      }
+    },
+    {
       "identity" : "boringssl-swiftpm",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/boringssl-SwiftPM.git",
@@ -88,6 +97,15 @@
       "state" : {
         "revision" : "7ee9ef9f627d85cbe1b8c4f49a3ed26eed216c77",
         "version" : "2.30908.0"
+      }
+    },
+    {
+      "identity" : "paper-onboarding",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Ramotion/paper-onboarding.git",
+      "state" : {
+        "revision" : "c36df080b1001c385cc14c85f3b1c5ea36531fd0",
+        "version" : "6.1.5"
       }
     },
     {

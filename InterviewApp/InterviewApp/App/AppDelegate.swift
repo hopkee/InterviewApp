@@ -14,10 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
 //    var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        UITabBar.appearance().backgroundColor = UIColor(red: 0 / 255, green: 99 / 255, blue: 193 / 255, alpha: 1)
+        UITabBar.appearance().backgroundColor = CustomColors.getColor(CustomColor.mainBlue)
         UITabBar.appearance().tintColor = .white
         UITabBar.appearance().barTintColor = .white
-        UITabBar.appearance().unselectedItemTintColor = .red
         FirebaseApp.configure()
         return true
     }
@@ -38,13 +37,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if viewController is NewInterviewView {
-                if let newVC = tabBarController.storyboard?.instantiateViewController(withIdentifier: "CMViewController") {
-                    newVC.modalPresentationStyle = .overCurrentContext
-                    tabBarController.present(newVC, animated: false)
-                    return false
+                let newVC = NewInterviewView()
+                newVC.modalPresentationStyle = .overCurrentContext
+            let interviewProcessStoryboard = UIStoryboard(name: "InterviewProcess", bundle: nil)
+            guard let interviewInProgressVC = interviewProcessStoryboard.instantiateViewController(withIdentifier: "InterviewInProgress") as? InterviewInProgressVC else { return false }
+            interviewInProgressVC.modalPresentationStyle = .fullScreen
+                newVC.completion = { interview in
+                    interviewInProgressVC.interview = interview
+                    tabBarController.present(interviewInProgressVC, animated: true)
+                    print("InterviewInProgressVC is presented")
                 }
-            }
-            return true
+                tabBarController.present(newVC, animated: false)
+            return false
+            
+        }
+        return true
     }
 
 }

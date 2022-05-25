@@ -14,6 +14,16 @@ final class AuthManager {
 
     private init() {}
     
+    func onboardingWasShown() {
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "onboardingWasShownToUser")
+    }
+    
+    func wasOnboardingShownToUser() -> Bool {
+        let defaults = UserDefaults.standard
+        return defaults.bool(forKey: "onboardingWasShownToUser")
+    }
+    
     func loginUser(user: User?) {
         if let user = user,
            let password = user.password {
@@ -69,7 +79,5 @@ final class AuthManager {
             completion(currentUser)
         })
     }
-    
-    
     
 }

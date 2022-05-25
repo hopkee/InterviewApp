@@ -100,6 +100,11 @@ final class IntervieweesTVC: UITableViewController {
         cell.intervieweeName.text = interviewees[indexPath.row].name
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedInterviewee = self.interviewees[indexPath.row]
+        performSegue(withIdentifier: "GoToDetailInterviewee", sender: selectedInterviewee)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -135,15 +140,12 @@ final class IntervieweesTVC: UITableViewController {
         return true
     }
     */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "GoToDetailInterviewee" {
+            guard let destVC = segue.destination as? DetailIntervieweeVC,
+                  let interviewee = sender as? Interviewee else { return }
+            destVC.interviewee = interviewee
+        }
     }
-    */
-
 }

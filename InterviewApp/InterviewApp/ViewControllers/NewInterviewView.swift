@@ -16,43 +16,56 @@ class NewInterviewView: UIViewController {
         return label
     }()
     
-    lazy var buttonRealtime: UIButton = {
+    lazy var buttonStartInterview: UIButton = {
         let button = UIButton()
-        button.setTitle("Real-time transcripting", for: .normal)
+        button.setTitle("Start interview", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.frame = CGRect(x: 20, y: -15, width: 300, height: 60)
         button.backgroundColor = UIColor(red: 0 / 255, green: 99 / 255, blue: 193 / 255, alpha: 1)
         button.layer.cornerRadius = 15
+        button.addTarget(self, action: #selector(showFullModalView(sender:)), for: .touchUpInside)
         return button
     }()
     
-    lazy var buttonSimpleRecordInterview: UIButton = {
+    lazy var buttonPlanNewInterview: UIButton = {
         let button = UIButton()
-        button.setTitle("Simple interview recording", for: .normal)
+        button.setTitle("Plan an interview", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.frame = CGRect(x: 20, y: -15, width: 300, height: 60)
-        button.backgroundColor = UIColor(red: 0 / 255, green: 99 / 255, blue: 193 / 255, alpha: 1)
+        button.backgroundColor = UIColor(red: 34 / 255, green: 99 / 255, blue: 193 / 255, alpha: 1)
         button.layer.cornerRadius = 15
+        button.addTarget(self, action: #selector(addNewInterviewAction(sender:)), for: .touchUpInside)
         return button
     }()
     
-    lazy var buttonAddRecordedAudio: UIButton = {
-        let button = UIButton()
-        button.setTitle("Add recorded audio", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.frame = CGRect(x: 20, y: -15, width: 300, height: 60)
-        button.backgroundColor = UIColor(red: 0 / 255, green: 99 / 255, blue: 193 / 255, alpha: 1)
-        button.layer.cornerRadius = 15
-        return button
+    lazy var selectIntervieweeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Select your planned interview"
+        label.font = .boldSystemFont(ofSize: 25)
+        return label
     }()
-    
-//    lazy var buttonTest: MainButton = MainButton(
     
     lazy var contentStackView: UIStackView = {
         let spacer = UIView()
-        let stackView = UIStackView(arrangedSubviews: [titleLabel, buttonRealtime, buttonSimpleRecordInterview, buttonAddRecordedAudio, spacer])
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, buttonStartInterview, buttonPlanNewInterview, spacer])
         stackView.axis = .vertical
         stackView.spacing = 12.0
+        return stackView
+    }()
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.separatorColor = UIColor(red: 34 / 255, green: 99 / 255, blue: 193 / 255, alpha: 1)
+        tableView.delegate = self
+        tableView.dataSource = self
+        return tableView
+    }()
+    
+    lazy var selectIntervieweeStackView: UIStackView  = {
+        let spacer = UIView()
+        let stackView = UIStackView(arrangedSubviews: [selectIntervieweeLabel, tableView, spacer])
+        stackView.axis = .vertical
+        stackView.spacing = 20
         return stackView
     }()
     
@@ -73,7 +86,7 @@ class NewInterviewView: UIViewController {
     }()
     
     // Constants
-    let defaultHeight: CGFloat = 300
+    let defaultHeight: CGFloat = 240
     let dismissibleHeight: CGFloat = 200
     let maximumContainerHeight: CGFloat = UIScreen.main.bounds.height - 64
     // keep current new height, initial is default height
@@ -83,6 +96,11 @@ class NewInterviewView: UIViewController {
     var containerViewHeightConstraint: NSLayoutConstraint?
     var containerViewBottomConstraint: NSLayoutConstraint?
     
+    var interviews: [Interview] = []
+    let dbManager = DatabaseManager()
+    let currentUserUid = AuthManager.shared.getCurrentUserUid()
+    var completion: ((Interview) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -90,8 +108,18 @@ class NewInterviewView: UIViewController {
         // tap gesture on dimmed view to dismiss
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleCloseAction))
         dimmedView.addGestureRecognizer(tapGesture)
-        
+        loadData()
         setupPanGesture()
+    }
+    
+    @objc private func addNewInterviewAction(sender: UIButton!) {
+        let storyboard = UIStoryboard(name: "InterviewProcess", bundle: nil)
+        guard let destVC = storyboard.instantiateViewController(withIdentifier: "addNewInterview") as? PlanNewInterviewVC else { return }
+        self.show(destVC, sender: nil)
+    }
+    
+    @objc private func showFullModalView(sender: UIButton!) {
+        animateContainerHeight(maximumContainerHeight)
     }
     
     @objc func handleCloseAction() {
@@ -102,6 +130,14 @@ class NewInterviewView: UIViewController {
         super.viewDidAppear(animated)
         animateShowDimmedView()
         animatePresentContainer()
+    }
+    
+    private func loadData() {
+        guard let uid = currentUserUid else { return }
+        dbManager.getUncompletedInterviews(uid: uid, completion: { [weak self] interviews in
+            self!.interviews = interviews
+            self!.tableView.reloadData()
+        })
     }
     
     func setupView() {
@@ -116,7 +152,9 @@ class NewInterviewView: UIViewController {
         containerView.translatesAutoresizingMaskIntoConstraints = false
         
         containerView.addSubview(contentStackView)
+        containerView.addSubview(selectIntervieweeStackView)
         contentStackView.translatesAutoresizingMaskIntoConstraints = false
+        selectIntervieweeStackView.translatesAutoresizingMaskIntoConstraints = false
         
         // Set static constraints
         NSLayoutConstraint.activate([
@@ -130,12 +168,16 @@ class NewInterviewView: UIViewController {
             containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             // content stackView
             contentStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 32),
-            contentStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -20),
+//            contentStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -20),
             contentStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
             contentStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
-            buttonRealtime.heightAnchor.constraint(equalToConstant: 50),
-            buttonAddRecordedAudio.heightAnchor.constraint(equalToConstant: 50),
-            buttonSimpleRecordInterview.heightAnchor.constraint(equalToConstant: 50),
+            selectIntervieweeStackView.topAnchor.constraint(equalTo: contentStackView.bottomAnchor, constant: 50),
+            selectIntervieweeStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 40),
+            selectIntervieweeStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant:-40),
+//            selectIntervieweeStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant:-40),
+            buttonStartInterview.heightAnchor.constraint(equalToConstant: 50),
+            buttonPlanNewInterview.heightAnchor.constraint(equalToConstant: 50),
+            tableView.heightAnchor.constraint(equalToConstant: 300),
         ])
         
         // Set dynamic constraints
@@ -253,4 +295,25 @@ class NewInterviewView: UIViewController {
             self.view.layoutIfNeeded()
         }
     }
+}
+
+extension NewInterviewView: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        interviews.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "selectInterviewCell")
+        var configuration = cell.defaultContentConfiguration()
+        configuration.text = interviews[indexPath.row].title
+        cell.contentConfiguration = configuration
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.dismiss(animated: false)
+        completion!(interviews[indexPath.row])
+    }
+    
 }
