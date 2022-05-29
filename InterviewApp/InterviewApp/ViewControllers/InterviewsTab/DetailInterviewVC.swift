@@ -22,6 +22,7 @@ class DetailInterviewVC: UIViewController {
     @IBOutlet weak var playBtnOutlet: UIButton!
     @IBOutlet weak var heightOfBlueView: NSLayoutConstraint!
     @IBOutlet weak var whiteView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
@@ -55,6 +56,7 @@ class DetailInterviewVC: UIViewController {
     var audioPlayer: AVAudioPlayer?
     var cloudStorage = CloudStorageManager()
     var currentUserUID = AuthManager.shared.getCurrentUserUid()
+    let dbManager = DatabaseManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,14 +80,15 @@ class DetailInterviewVC: UIViewController {
             durationStackViewOutlet.isHidden = true
             heightOfBlueView.constant -= 30
         }
-        if let _ = interview?.transcription {
-            segmentControlOutlet.isHidden = false
+        if !interview!.isCompleted {
+            segmentControlOutlet.isHidden = true
         }
         if let isAudioRecorded = interview?.isAudioRecorded {
             isAudioRecorded ? (playBtnOutlet.isHidden = false) : (playBtnOutlet.isHidden = true)
         } else {
             playBtnOutlet.isHidden = true
         }
+        activityIndicator.isHidden = true
         tableViewOutlet.layer.borderWidth = 1
         tableViewOutlet.layer.borderColor = CustomColors.getColor(CustomColor.mainBlue).cgColor
         tableViewOutlet.layer.cornerRadius = 15
@@ -97,19 +100,34 @@ class DetailInterviewVC: UIViewController {
     
     private func setupSegmentControl(_ sender: UISegmentedControl?) {
         
-        if interview?.transcription == nil {
-            segmentControlOutlet.isHidden = true
-        } else {
-            segmentControlOutlet.isHidden = false
-        }
-        
         switch !(sender == nil) ? (sender!.selectedSegmentIndex) : (segmentControlOutlet.selectedSegmentIndex) {
             case 0:
+                activityIndicator.isHidden = true
+                activityIndicator.stopAnimating()
                 tableViewOutlet.isHidden = false
                 textView.isHidden = true
             case 1:
                 tableViewOutlet.isHidden = true
+            if let transcription = interview?.transcription {
+                textView.text = transcription
                 textView.isHidden = false
+            } else {
+                activityIndicator.startAnimating()
+                activityIndicator.isHidden = false
+                let directoryURL = FileManager.default.urls(for: FileManager.SearchPathDirectory.documentDirectory, in:
+                            FileManager.SearchPathDomainMask.userDomainMask).first
+                let audioFileName = interview!.id + ".m4a"
+                let audioFileURL = directoryURL!.appendingPathComponent(audioFileName)
+                AssemblyaiAPIManager.shared.getTextFromAudioFile(audioFileURL, handler: { [weak self] transcriptedText in
+                    self!.textView.text = transcriptedText
+                    self!.interview?.transcription = transcriptedText
+                    self!.activityIndicator.stopAnimating()
+                    self!.activityIndicator.isHidden = true
+                    self!.textView.isHidden = false
+                    self!.dbManager.createInterview(uid: self!.currentUserUID!, self!.interview!)
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateInterviews"), object: nil)
+                })
+            }
             default:
                 break
             }
